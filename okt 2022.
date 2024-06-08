@@ -1,0 +1,24 @@
+
+8.
+a)
+class MojaKlasa
+{
+final void MojaMetoda(){}
+}
+b)
+final class MojaKlasa{}
+c)
+public final class String
+
+9.
+greska jer nema deklarisanja tipa, Klasa je genericka klasa
+Klasa k1 = new Klasa(); -> Klasa<tip> k1 = new Klasa();
+Klasa<Double> k3 = new Klasa<>(1.1) - cannot convert from double to T
+
+10.
+a)
+String je NULL!
+1/1/0001 12:00:00 AM
+b)
+kastovanje nije validno
+
