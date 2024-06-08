@@ -1,0 +1,31 @@
+okt. 2023
+7.
+umesto private double a; treba protected double a; i onda je kod uredu
+8. txt upis
+public citanjeTxt(string file){
+	try {
+		FileReader f=new FileReader(filename);
+		BufferedReader b = new BufferedReader(f);
+			
+		this.a = Double.parseDouble(b.readLinne());
+		b.close();
+	}		
+	catch(IOException exp)
+	{ ... }
+}
+
+public citanjeBin(string file){
+	try {
+		FileInputStream f= new FileInputStream(filename);
+		BufferedInputStream b = new BufferedInputStream(f);
+			
+		this.a = Double.parseDouble(b.readLinne());
+		b.close();
+	}		
+	catch(IOException exp)
+	{ ... }
+}
+InputStream inputStream = new FileInputStream(inputFile); -- binary read
+OutputStream outputStream = new FileOutputStream(outputFile); -- binary write
+InputStream inputStream = new BufferedInputStream(new FileInputStream(inputFile)); -- binary read
+OutputStream outputStream = new BufferedOutputStream(new FileOutputStream(outputFile)); -- binary write
