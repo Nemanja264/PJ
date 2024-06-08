@@ -1,0 +1,71 @@
+**7.**
+@Override
+public int zbir(int x)
+{
+	return x.intValue() + this.x;
+}
+@Override
+public double proizvod(double x)
+{
+	return x.intValue * this.x;
+
+**8.**
+public void fajjMetoda(string file)
+{
+  try{
+	FileReader f1 = new FileReader(file);
+	BufferedReader b1 = new BufferedReader(f);
+	String razlomak = b1.readLine();
+	b1.close();
+	double brojilac = Double.parseDouble(razlomak[0]);
+	double imenilac = Double.parseDouble(razlomak[2]);
+	if(imenilac == 0)
+		throw new NedefinisanRazlomak("imenilac je nula");
+	double kolicnik = brojilac/imenilac;
+
+	FileOutputStream f2 = new FileOutputStream("datoteka.bin");
+	BufferedOutputStream b2= new BufferedOutputStream(f);
+	b2.write(kolicnik);
+	b2.close();
+  }
+  catch (NedefinisanRazlomak nr)
+  {
+  	System.out.println(nr.getMessage());
+  } 
+  catch (IOException exp)
+  {
+  	System.out.println("Izuzetak: " + exp);
+  } 
+  catch (Exception exp)
+  {
+  	System.out.println("Izuzetak: " + exp);
+  }
+}
+
+**12.**
+List<String> list = new List<String>();
+list[0] = "Nula";
+list[0] = "Nula";
+list[1] = "Jedan";
+list[1] = "Jedan";
+list[2] = "Dva";
+list[2] = "Dva";
+foreach (string stavka in list)
+    Console.WriteLine(stavka);
+
+System.ArgumentOutOfRangeException: 'Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index'
+
+Dictionary<int,String> recnik = new Dictionary<int,String>();
+recnik[0] = "Nula";
+recnik[0] = "Nula";
+recnik[1] = "Jedan";
+recnik[1] = "Jedan";
+recnik[2] = "Dva";
+recnik[2] = "Dva";
+foreach(string stavka in recnik.Values)
+    Console.WriteLine(stavka);
+
+Nula
+Jedan
+Dva
