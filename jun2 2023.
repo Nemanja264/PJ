@@ -1,0 +1,41 @@
+8.
+class K
+{
+	final void nepred(){}
+	void pred(){}
+}
+10.
+a) 0 + j0
+   1 + j1
+   2 + j2
+   3 + j3
+b) nullpointer exception, jer nije pozvan konstruktor za object
+11.
+  kompl[] niz = new kompl[4];
+  for(int i = 0; i < niz.Length; i++) 
+  {
+      niz[i].R = niz[i].G = i;
+  }
+  for (int i = 0; i < niz.Length; i++)
+  {
+      Console.WriteLine(niz[i]);
+  }
+double pi = 3.14;
+
+DateTime danas = DateTime.Today;
+inc(pi, danas, niz[0]);
+Console.WriteLine(danas.DayOfWeek);
+Console.WriteLine(niz[0]);
+Console.WriteLine(pi);
+
+ private static void inc(double pi, DateTime dn, kompl k1)
+ {
+     pi++;
+     dn.AddDays(1);
+     k1.R++;
+     k1.G++;
+ }
+
+Wednesday
+0 + j0
+3.14
