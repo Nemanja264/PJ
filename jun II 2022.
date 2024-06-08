@@ -1,6 +1,6 @@
 
 7.
-enum TrafficSignal {
+enum FizickeVelicine {
 
     Snaga{
         @Override
