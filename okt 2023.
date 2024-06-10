@@ -29,3 +29,39 @@ InputStream inputStream = new FileInputStream(inputFile); -- binary read
 OutputStream outputStream = new FileOutputStream(outputFile); -- binary write
 InputStream inputStream = new BufferedInputStream(new FileInputStream(inputFile)); -- binary read
 OutputStream outputStream = new BufferedOutputStream(new FileOutputStream(outputFile)); -- binary write
+
+12.
+    delegate void PrikaziPoruku();
+    internal class Generator
+    {
+        public PrikaziPoruku PrikaziPoruku;
+    }
+    internal class Pr1
+    {
+        public void Stampa()
+        {
+            Console.WriteLine("prvi pr");
+        }
+    }
+    internal class Pr2
+    {
+        public void Stampa()
+        {
+            Console.WriteLine("drugi pr");
+        }
+    }
+static void Main(string[] args)
+{
+ 	Pr1 pr1 = new Pr1();
+	Pr2 pr2 = new Pr2();
+	Generator generator = new Generator();
+ 	generator.PrikaziPoruku += pr1.Stampa;
+ 	generator.PrikaziPoruku += pr2.Stampa;
+ 	generator.PrikaziPoruku -= pr1.Stampa;
+ 	generator.PrikaziPoruku += pr1.Stampa;
+ 	generator.PrikaziPoruku();
+	/* 
+	drugi pr
+	prvi pr
+	*/
+}
