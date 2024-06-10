@@ -31,6 +31,7 @@ InputStream inputStream = new BufferedInputStream(new FileInputStream(inputFile)
 OutputStream outputStream = new BufferedOutputStream(new FileOutputStream(outputFile)); -- binary write
 
 12.
+a)
     delegate void PrikaziPoruku();
     internal class Generator
     {
@@ -65,3 +66,5 @@ static void Main(string[] args)
 	prvi pr
 	*/
 }
+b)
+dolazi do greske zbog event Handlera
