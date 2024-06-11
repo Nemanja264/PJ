@@ -1,0 +1,46 @@
+7.
+public enum Boja
+	{
+		crvena
+		{
+			public char engSlovo()
+			{
+				return 'c';
+			}
+		},
+		plava
+		{
+			public char engSlovo()
+			{
+				return 'p';
+			}
+		},
+		zelena
+		{
+			public char engSlovo()
+			{
+				return 'z';
+			}
+		};
+		public abstract char engSlovo();
+	}
+9.
+public class Klasa implements Comparable<Klasa> {
+
+		private int broj;
+		
+		public Klasa(int broj)
+		{
+			this.broj = broj;
+		}
+		public int VratiBroj()
+		{
+			return broj;
+		}
+		public int compareTo(Klasa k)
+		{
+			return ((Integer)broj).compareTo(k.broj);
+		}
+		
+	
+}
